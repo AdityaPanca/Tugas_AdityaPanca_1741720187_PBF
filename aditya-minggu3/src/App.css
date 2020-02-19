@@ -2,6 +2,32 @@
   text-align: center;
 }
 
+.biodata {
+  margin-top: 30px;
+}
+
+.foto {
+  padding: 30px;
+  height: 50px;
+}
+.centered {
+  text-align: center;
+}
+
+.kartu {
+  width: 1000px;
+  margin: 0 auto;
+  margin-top: 70px;
+}
+footer {
+  background-color: #1998ff;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  position: fixed;
+  bottom:0;
+  width: 100%;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
