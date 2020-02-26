@@ -1,16 +1,6 @@
-body{
-	font-family: sans-serif;
-	background: #ffffff;
-}
 
-.container {
-    display: block;
-    position: relative;
-    cursor: pointer;
-    margin: 80px auto;
-    padding: 30px 20px;
-    font-weight: bold;
-  }
+
+
 .judul{
     text-align: center;
 } 
@@ -18,63 +8,46 @@ body{
 h1{
 	text-align: center;
 	/*ketebalan font*/
-	font-weight: 400;
 }
  
-.tulisan_login{
-	text-align: center;
-	/*membuat semua huruf menjadi kapital*/
-	text-transform: uppercase;
-}
+
  
 .kotak_login{
     width: 350px;
     height: 390px;
 	background: white;
 	/*meletakkan form ke tengah*/
-	margin: 0px auto;
-    padding: auto 20px;
-    font-size: 30px;
-    font-weight: bold;
+	margin: -10px auto;
+    padding: auto 10px;
     border-style: solid;
-    border: 1px solid rgb(229,299,299)
+    border: 1px solid rgb(229, 229, 229);
 }
  
-label{
-	font-size: 11pt;
-}
+
  
 .form_login{
 	/*membuat lebar form penuh*/
 	box-sizing : border-box;
-	width: 100%;
-	padding: 10px;
-	font-size: 11pt;
-	margin-bottom: 20px;
+	width: 50%;
+	padding: 2px;
+	margin-bottom: 10px;
 }
  
 .tombol_login{
 	background: #46de4b;
 	color: white;
 	font-size: 11pt;
-	width: 100%;
+	width: 300px;
 	border: none;
-	border-radius: 3px;
 	padding: 10px 20px;
 }
  
 .tombol_cancel{
 	background: #ff3c3c;
-	color: white;
+    color: white;
+    margin: -10px auto;
 	font-size: 11pt;
-	width: 100%;
+	width: auto;
 	border: none;
-	border-radius: 3px;
 	padding: 10px 20px;
-}
-
-.link{
-	color: #232323;
-	text-decoration: none;
-	font-size: 10pt;
 }
