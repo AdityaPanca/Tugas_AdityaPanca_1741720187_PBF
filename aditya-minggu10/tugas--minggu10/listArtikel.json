@@ -1,15 +1,5 @@
 {
-  "post": [
-    {
-      "id": 1586347133575,
-      "NIM": "086454645344",
-      "nama": "ADITYA PANCA PUTRA",
-      "alamat": "malang",
-      "hp": "122656567565465",
-      "angkatan": "15",
-      "status": "mahasiswa"
-    }
-  ],
+  "post": [],
   "comments": [],
   "profile": {
     "name": "typicode"
