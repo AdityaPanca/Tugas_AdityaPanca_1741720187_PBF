@@ -1,22 +1,7 @@
 {
-  "Post": [
-    {
-      "id": 1583422252300,
-      "NIM": "124632416524",
-      "nama": "aditya",
-      "alamat": "malang",
-      "hp": "090898786767656",
-      "angkatan": "2017",
-      "status": "aktif"
-    },
-    {
-      "id": 1583422711959,
-      "NIM": "12243554565768",
-      "nama": "fawwaz",
-      "alamat": "sidoarjo",
-      "hp": "0834635634534",
-      "angkatan": "2017",
-      "status": "aktif"
-    }
-  ]
+  "posts": [],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
 }
