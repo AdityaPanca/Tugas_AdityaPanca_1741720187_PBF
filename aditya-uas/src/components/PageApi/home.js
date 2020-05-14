@@ -4,7 +4,7 @@ import { addDataToAPI,getDataFromAPI,updateDataFromAPI, deleteDataFromAPI } from
 import "../../Config/redux/reducer/reducer"
 import { connect } from 'react-redux';
 
-class Dashboard extends Component{
+class Home extends Component{
     state= {
         title:'',
         content:'',
@@ -77,13 +77,26 @@ class Dashboard extends Component{
         deleteNote(data)
     }
 
-    render(){
+    render(){  
         const {textButton} = this.state;
         const {notes} = this.props;
         const {updateNotes, cancelUpdate, deleteNote} = this;
         console.log('notes: ',notes);
         return(
-
+            <div>
+                <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
+                <a className="navbar-brand" class="text-danger" href="#">Catatanku!!!</a>
+                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
+                </button>
+                <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div className="navbar-nav">
+                <a className="nav-item nav-link active" href="/home">Home <span className="sr-only">(current)</span></a>
+                <a className="nav-item nav-link active" href="/">Catatan</a>
+              </div>
+            </div>
+          </nav>
+        
             <div className="container">
                 <div className="input-form">
                     <input id="title" placeholder="title" type="text" className="input-title" onChange={this.onInputChange} value={this.state.title}/>
@@ -119,6 +132,7 @@ class Dashboard extends Component{
                      ) : null
                 }    
             </div>
+            </div>
         )
     }
 }
@@ -135,4 +149,4 @@ const reduxDispatch = (dispatch) => ({
     deleteNote:(data) => dispatch(deleteDataFromAPI(data))
 })
 
-export default connect(reduxState,reduxDispatch)(Dashboard);
+export default connect(reduxState,reduxDispatch)(Home);

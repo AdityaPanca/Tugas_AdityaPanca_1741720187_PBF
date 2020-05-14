@@ -83,43 +83,57 @@ class Dashboard extends Component{
         const {updateNotes, cancelUpdate, deleteNote} = this;
         console.log('notes: ',notes);
         return(
-
-            <div className="container">
-                <div className="input-form">
-                    <input id="title" placeholder="title" type="text" className="input-title" onChange={this.onInputChange} value={this.state.title}/>
-                    <textarea id="content" placeholder="content" type="text" className="input-content" onChange={this.onInputChange} value={this.state.content}>
-                    </textarea>
-                    <div className="action-wrapper">
-                        {
-                            textButton === 'UPDATE' ? (
-                                <button onClick={this.handleSaveNotes} className="save-btn cancel" onClick={cancelUpdate}>Cancel</button>
-                            ) : null
-                        }     
-                        <button onClick={this.handleSaveNotes} className="save-btn">{textButton}</button>
-                    </div>
-                    
+            <div>
+            <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
+            <a className="navbar-brand" class="text-danger" href="#">Catatanku!!!</a>
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div className="navbar-nav">
+            <a className="nav-item nav-link active" href="/home">Home <span className="sr-only">(current)</span></a>
+            <a className="nav-item nav-link active" href="/">Catatan</a>
+          </div>
+        </div>
+      </nav>
+    
+        <div className="container">
+            <div className="input-form">
+                <input id="title" placeholder="title" type="text" className="input-title" onChange={this.onInputChange} value={this.state.title}/>
+                <textarea id="content" placeholder="content" type="text" className="input-content" onChange={this.onInputChange} value={this.state.content}>
+                </textarea>
+                <div className="action-wrapper">
+                    {
+                        textButton === 'UPDATE' ? (
+                            <button onClick={this.handleSaveNotes} className="save-btn cancel" onClick={cancelUpdate}>Cancel</button>
+                        ) : null
+                    }     
+                    <button onClick={this.handleSaveNotes} className="save-btn">{textButton}</button>
                 </div>
-                <hr/>
-                {
-                    notes.length > 0 ? (
-                        <Fragment>
-                            {
-                                notes.map(note => {
-                                    return(
-                                        <div className="card-content" key={note.id} onClick={() => updateNotes(note)}>
-                                        <p className="title">{note.data.title}</p>
-                                        <p className="date"> tanggal: {note.data.date} / bulan: {note.data.month} / tahun: {note.data.year}</p>
-                                        <p className="content">{note.data.content}</p>
-                                        <div className="delete-btn" onClick={(e) => deleteNote(e, note)}>x</div>
-                                    </div>
-                                    )
-                                })
-                            }
-                        </Fragment>    
-                     ) : null
+                
+            </div>
+            <hr/>
+            {
+                notes.length > 0 ? (
+                    <Fragment>
+                        {
+                            notes.map(note => {
+                                return(
+                                    <div className="card-content" key={note.id} onClick={() => updateNotes(note)}>
+                                    <p className="title">{note.data.title}</p>
+                                    <p className="date"> tanggal: {note.data.date} / bulan: {note.data.month} / tahun: {note.data.year}</p>
+                                    <p className="content">{note.data.content}</p>
+                                    <div className="delete-btn" onClick={(e) => deleteNote(e, note)}>x</div>
+                                </div>
+                                )
+                            })
+                        }
+                    </Fragment>    
+                ) : null
                 }    
             </div>
-        )
+        </div>
+    )
     }
 }
 const reduxState = (state) => ({
