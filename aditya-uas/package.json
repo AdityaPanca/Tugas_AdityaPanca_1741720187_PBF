@@ -1,16 +1,21 @@
 {
-  "name": "aditya-minggu11",
+  "name": "aditya-uas",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
-    "firebase": "^7.14.0",
+    "firebase": "^7.14.3",
+    "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.1"
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "react-thunk": "^1.0.0",
+    "redux": "^4.0.5",
+    "redux-thunk": "github:reduxjs/redux-thunk#master"
   },
   "scripts": {
     "start": "react-scripts start",
